@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confessions</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+	<div>
+
+		<div id="video-container">
+			Messenger <video id="messenger-video" autoplay></video>
+			<video id="father-video" autoplay muted="false"></video>Father
+			<div id="father">...</div>
+		</div>	
+
+		<div>
+
+			<div id="step1">
+				<p>Click "allow"</p>
+				<div id="step1-error">
+					<p>Failed to get webcam</p>
+					<a href="#" id="step1-retry">Try again</a>
+				</div>
+			</div>
+
+			<div id="step2">
+				<p>ID: <span id= "father-id">...</span></p>
+				<p>Share this ID</p>
+				<p><span id="subhead">Make Call</span><br>
+					<input type="text" placeholder="Call User Id.." id="callto-id">
+					<a href="#" id="make-call">Call</a>
+				</p>
+			</div>
+
+			<div id="step3">
+				<p>On Call With <span id="messenger-id">...</span></p>
+				<p><a href="#" id="end-call">Hang Up</a></p>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
